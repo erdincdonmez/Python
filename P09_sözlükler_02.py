@@ -1,10 +1,10 @@
 # sözlükler
 
-TurkceIngilice={
+TurkceIngilizce={
   "Fil"   : "Elephant",
   "Aslan" : "Lion",
   "Kedi"  : "Cat"
 }
 
 kelime ="Kedi"
-print (kelime," kelimesinin İngilizcesi : ",TurkceIngilice[kelime])
+print (kelime," kelimesinin İngilizcesi : ",TurkceIngilizce[kelime])
