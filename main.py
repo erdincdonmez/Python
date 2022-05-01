@@ -1,5 +1,5 @@
 import random
+liste = ['Ayşe', 'Fatma', 'Ahmet','Mehmet']
+print(random.choice(liste))
 
-print ( random.randint(50,100) ) 
-
-# 50 ile 100 arası rasgele bir sayı yazdırır.
+# listeden rasgele bir eleman yazdırır.
