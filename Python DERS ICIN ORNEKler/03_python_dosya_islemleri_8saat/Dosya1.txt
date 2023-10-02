@@ -1,0 +1,5 @@
+Hello
+naber
+f = open("Dosya1.txt", "r")
+print(f.read(15))
+Now the file has more content!

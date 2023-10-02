@@ -1,0 +1,3 @@
+print ("Merhaba",),
+
+print ("Nasılsın")

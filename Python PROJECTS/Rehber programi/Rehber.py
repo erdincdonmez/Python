@@ -1,0 +1,2 @@
+import menuler
+menuler.anaMenu()

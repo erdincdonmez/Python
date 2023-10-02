@@ -1,0 +1,2 @@
+f = open("Dosyalar - Okuma-1.py", "r")
+print(f.read(5))

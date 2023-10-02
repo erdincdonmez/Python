@@ -1,0 +1,11 @@
+abc = "ErDiNç DöNmez"
+print(abc.capitalize())
+print("ErDiNç".lower())
+print("ErDiNç".upper())
+print(abc.casefold())
+print(abc.swapcase())
+print(abc.title())
+print(abc.replace("E","a"))
+print(abc.upper().replace("E","a"))
+print(abc.count("D"))
+print(abc.find("Dö"))

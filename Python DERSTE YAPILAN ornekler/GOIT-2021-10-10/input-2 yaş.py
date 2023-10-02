@@ -1,0 +1,5 @@
+print ("Yaş hesaplayıcı")
+print ("===============")
+dy = int( input("Hangi yılda doğdun?"))
+print("Demek", 2021-dy,"yaşındasın.")
+input()
