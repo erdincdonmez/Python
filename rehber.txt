@@ -1,0 +1,5 @@
+Dosyaya kaydedilen veri.
+Ýkinci satýra geçtik!!
+Üçüncü satýr çalýþmaya devam--!!!-
+
+
