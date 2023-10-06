@@ -1,0 +1,10 @@
+from tkinter import *
+master = Tk()
+master.geometry("300x150")
+Label(master, text='First Name').place(x=20,y=30)
+Label(master, text='Last Name').place(x=20,y=70)
+e1 = Entry(master) 
+e2 = Entry(master) 
+e1.place(x=120,y=30) 
+e2.place(x=120,y=70) 
+mainloop() 
