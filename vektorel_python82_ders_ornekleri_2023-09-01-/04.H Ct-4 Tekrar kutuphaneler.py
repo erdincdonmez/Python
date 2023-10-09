@@ -1,2 +1,0 @@
-import vektorel
-vektorel.merhabaDe()
