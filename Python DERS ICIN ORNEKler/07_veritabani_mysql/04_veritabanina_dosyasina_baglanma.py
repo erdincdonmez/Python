@@ -4,7 +4,7 @@ try:
     mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="123",
+    password="1234",
     database="pythondersleri"
     )
     print ("Bağlantı başarılı")
