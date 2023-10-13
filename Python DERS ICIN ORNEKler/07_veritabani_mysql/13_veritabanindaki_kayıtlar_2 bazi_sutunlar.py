@@ -1,4 +1,4 @@
-# primary key i var olan bir tablodaki alanlara ekleme.
+# bazı sütünlar
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -9,5 +9,8 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
+mycursor.execute("SELECT ad FROM ogrenciler")
+myresult = mycursor.fetchall()
 
-mycursor.execute("ALTER TABLE ogrenciler ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY")
+for x in myresult:
+  print(x)
