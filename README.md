@@ -1,8 +1,5 @@
-# erdincdonmez.com
-## Python Öğrenmek için örnekler ve
-## Derslerde yapılan örneklerini içeren bir repository
-
-### Python Öğrenmek için örnekler ve
+# PYTHON repositort (erdincdonmez.com)
+## Python Öğrenmek için örneklerü
 > - Temel python komutları
 > - Python fonksiyonlarının gelişmiş kullanımı
 > - Dosya işlemleri
@@ -10,6 +7,10 @@
 > - Masaüstü geliştirme
 > - Veritabanı
 > - Web geliştirme
+
+## Derslerde yapılan örnekler ve 
+
+## Python için KAYNAKLAR'ı içeren bir repository
 
 [https://docs.python.org/3/_images/turtle-star.png] (https://github.com/erdincdonmez/python_ornekleri_vektorel82/blob/main/01.H%20Ct-3%20Turtle-1.py) 
 
