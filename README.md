@@ -1,12 +1,15 @@
-# python_ornekleri_vektorel82
-## Vektörel bilişim python derslerinde yaptığımız örnekler
-Derslerde
+# erdincdonmez.com
+## Python Öğrenmek için örnekler ve
+## Derslerde yapılan örneklerini içeren bir repository
+
+### Python Öğrenmek için örnekler ve
 > - Temel python komutları
 > - Python fonksiyonlarının gelişmiş kullanımı
 > - Dosya işlemleri
-öğrendik.
-
-mesela
+> - OOP
+> - Masaüstü geliştirme
+> - Veritabanı
+> - Web geliştirme
 
 [https://docs.python.org/3/_images/turtle-star.png] (https://github.com/erdincdonmez/python_ornekleri_vektorel82/blob/main/01.H%20Ct-3%20Turtle-1.py) 
 
