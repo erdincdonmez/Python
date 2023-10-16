@@ -1,5 +1,5 @@
 # PYTHON repository (erdincdonmez.com)
-## Python Öğrenmek için örneklerü
+## Python Öğrenmek için örnekler
 > - Temel python komutları
 > - Python fonksiyonlarının gelişmiş kullanımı
 > - Dosya işlemleri
