@@ -9,7 +9,7 @@ try:
   print(mydb)
   try:
     mycursor = mydb.cursor()
-    mycursor.execute("CREATE DATABASE pythondersleri")
+    mycursor.execute("CREATE DATABASE ots")
     print("Veritabanı oluşturuldu.")
   except:
     print(f"Veri tabanı oluşturulamadı. Hata : {mysql.connector.Error}")
