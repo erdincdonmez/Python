@@ -1,1 +1,1 @@
-# python_ornekleri_vektorel82
+# python_ornekleri_vektorel82.
