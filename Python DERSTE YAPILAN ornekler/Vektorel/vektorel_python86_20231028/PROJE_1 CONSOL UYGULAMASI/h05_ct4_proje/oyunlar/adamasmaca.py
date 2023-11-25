@@ -1,0 +1,1 @@
+print("Adam asmaca oyunu çalıştı.")

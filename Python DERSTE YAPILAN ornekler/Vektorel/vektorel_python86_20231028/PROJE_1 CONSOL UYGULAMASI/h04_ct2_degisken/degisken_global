@@ -1,0 +1,9 @@
+a = 20
+def yaz():
+    b = 10
+    a = 15
+    print(a)
+
+print(a)
+yaz()
+print(a)
