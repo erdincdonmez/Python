@@ -1,4 +1,4 @@
-# PYTHON repository (erdincdonmez.com)
+# PYTHON repository [erdincdonmez.com]
 ## Python Öğrenmek için örnekler
 > - Temel python komutları
 > - Python fonksiyonlarının gelişmiş kullanımı
