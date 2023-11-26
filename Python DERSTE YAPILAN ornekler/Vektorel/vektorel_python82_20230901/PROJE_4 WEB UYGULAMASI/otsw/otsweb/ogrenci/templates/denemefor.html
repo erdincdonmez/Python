@@ -1,0 +1,32 @@
+<!-- denemefor.html dosyası kodları -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <ul>
+        {% for x in aktarilanListe %}
+        <li>{{ x }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>views.py'den gelen listenin for ile yazdırılması örneği.</p>
+
+    <h1>Merhaba{# Açıklama#}</h1>
+
+    <h1>Merhaba</h1>
+    {% comment %}
+      <h1>Açıklama ifadesi</h1>
+    {% endcomment %}
+    
+    <h1>Merhaba</h1>
+    {% comment "ORjinAli" %}
+        <h1>Merhabayın.</h1>
+    {% endcomment %}
+
+
+
+
+</body>
+
+</html>

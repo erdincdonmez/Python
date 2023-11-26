@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+OTS - liste
+{% endblock %}
+
+{% block content %}
+
+    <h1>{{ aktarilan.AdiSoyadi }}</h1>
+    <p>TC     : {{ aktarilan.TC }} </p>
+    <p>Adı    : {{ aktarilan.Adi }}</p>
+    <p>Soyadı : {{ aktarilan.Soyadi }}</p>
+    <p>listeye <a href="/ogrencilerilistele">dön</a></p>
+
+{% endblock %}

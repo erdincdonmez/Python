@@ -1,0 +1,194 @@
+{% extends "master.html" %}
+
+{% block title %}
+OTS - deneme
+{% endblock %}
+
+
+{% block content %}
+<h2 style="color:black; background-color: #6bb9c9; font-family: 'Times New Roman', Times, serif;">Deneme sayfası</h2>
+<h5 class="bg-warning" style="color: olive">Sayfa mesajı: {{ mesaj }}</h5>
+{% with bilgi="Deneme amaçlı bir sayfa." %}
+<h5>Sayfa bilgisi : {{ bilgi }}</h5>
+{% endwith %}
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://mediatrend.mediamarkt.com.tr/wp-content/uploads/2017/02/2017_subat_03.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://fotolifeakademi.com/uploads/2020/04/manzara-fotografi-cekmek.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://fotolifeakademi.com/uploads/2020/04/manzara-fotografciligi-1-724x394.webp" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+
+
+
+<div style="text-align: center;">
+    <div>
+        <a href="https://wa.me/+905079438357">
+            <img class="wai" height="50px"
+                src="https://cdn.iconscout.com/icon/free/png-256/free-whatsapp-circle-1865865-2745472.png" alt="">
+        </a>
+    </div>
+    <h5>Öğrenciler</h5>
+
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f59064e3fe11b08f88adf.jpg" alt="">
+        <h6 class="baslik">Güvenlik zirvesi</h6>
+        <p>İçişlerinde hareketlilik.</p>
+    </div>
+
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f55d14e3fe11b08f88a81.jpg" alt="">
+        <h6 class="baslik">Berkay ACAR</h6>
+        <p>Müzisyen</p>
+    </div>
+
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f435f4e3fe11b08f88986.jpg" alt="">
+        <h6 class="baslik" style="color: #ffd000fd;" class="baslik">Halil AKSU</h6>
+        <p>Artist</p>
+    </div>
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f59064e3fe11b08f88adf.jpg" alt="">
+        <h6 class="baslik">Alper Güler</h6>
+        <p>Futbolcu</p>
+    </div>
+
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f55d14e3fe11b08f88a81.jpg" alt="">
+        <h6 class="baslik">Aydın ACAR</h6>
+        <p>Müzisyen</p>
+    </div>
+
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f435f4e3fe11b08f88986.jpg" alt="">
+        <h6 id="bas1" class="baslik">Halil AKSU</h6>
+        <p>Artist</p>
+    </div>
+    <div class="bolum">
+        <img class="resim" src="https://image.hurimg.com/i/hurriyet/75/296x210/654f59064e3fe11b08f88adf.jpg" alt="">
+        <h6 id="bas2" class="baslik">Aslı Güler</h6>
+        <p>Futbolcu</p>
+    </div>
+</div>
+<style>
+    * {
+        color: black;
+    }
+    h6, h2{
+        color: aqua;
+    }
+    #bas1{
+        color: blueviolet;
+    }
+    .bolum {
+        display: inline-block;
+        width: 30%;
+        background-color: #a4eaf8;
+        border-style: solid;
+        border-radius: 20px;
+        border-width: .3px;
+        border-color: #6bb9c9;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        /* min-height: 400px; */
+    }
+
+    .resim {
+        width: 80%;
+        border-radius: 20px;
+
+    }
+
+    .baslik {
+        color:#ff2244;
+        margin-top: 20px;
+        letter-spacing: 5px;
+        font-size: 1.2rem;
+    }
+
+    .wai {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+</style>
+
+<scripts>
+  alert("Merhaba")
+</scripts>
+{% endblock %}

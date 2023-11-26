@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+OTS - deneme
+{% endblock %}
+
+{% block content %}
+<h2>Deneme sayfası</h2>
+<h5>
+    <ul>
+        {% for x in ogrenciler %}
+        <li>{{ x.Adi }} {{ x.Soyadi }}</li>
+        {% endfor %}
+    </ul>
+</h5>
+{% endblock %}

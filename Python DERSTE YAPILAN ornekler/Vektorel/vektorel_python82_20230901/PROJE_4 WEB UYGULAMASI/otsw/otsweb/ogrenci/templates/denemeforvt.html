@@ -1,0 +1,17 @@
+<!-- denemeforvt.html dosyası kodları -->
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <ul>
+        {% for x in aktarilanListe %}
+        <li>{{ x.Adi }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>veritabanından alınan, views.py'den gelen listenin for ile yazdırılması örneği.</p>
+
+</body>
+
+</html>

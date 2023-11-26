@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+</head>
+
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">TC</th>
+                <th scope="col">Adı Soyadı</th>
+                <th scope="col">Branşı</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for x in aktarilanOgretmenler %}
+            <!-- dikkat, : işareti yok -->
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ x.TC }}</td>
+                <td>{{ x.AdiSoyadi }}</td>
+                <td>{{ x.Bransi}}</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
