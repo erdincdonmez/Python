@@ -1,0 +1,5 @@
+def listele(*eleman):
+    en = 3
+    print(en,".Eleman ", eleman[en-1])
+
+listele("Doruk", 5, "Helin")
