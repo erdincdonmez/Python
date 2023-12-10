@@ -1,0 +1,6 @@
+{'ad': 'Ediz', 'soyad': 'Hoş', 'numara': '123458574'}
+<class '__main__.Kayit'>
+<class '__main__.Kayit'>
+<class '__main__.Kayit'>
+Kıvanç SARI 5236985478
+Doruk KARA 8546523254

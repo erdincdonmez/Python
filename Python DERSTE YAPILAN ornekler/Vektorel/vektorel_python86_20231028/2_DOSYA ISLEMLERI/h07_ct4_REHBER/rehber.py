@@ -1,4 +1,11 @@
-
+class Kayit:
+    def __init__(self,gad,gsoyad,gtelefon="---"):
+        self.ad = gad
+        self.soyad = gsoyad
+        self.telefon = gtelefon
+    def __str__(self):
+        return f"Kaydedilen: {self.ad} {self.soyad} {self.telefon}"
+    
 def menu():
     print ("╔════════════════════════╗")
     print ("║  REHBER PROGRAMI       ║")
@@ -21,11 +28,20 @@ def menu():
         
 def rehbereEkle():
     dosya = open("rehber.txt","a")
+    
+    # kayit1 = Kayit
+    # kayit1.ad =    input("Ad    : ")
+    # kayit1.soyad = input("Soyad : ")
+    # kayit1.telefon= input("Numara: ")
+    # yazilacak = {"ad":ad,"soyad":soyad,"numara":numara}
+    # dosya.write(str(yazilacak)+"\n")
     ad =    input("Ad    : ")
     soyad = input("Soyad : ")
-    numara= input("Numara: ")
-    yazilacak = {"ad":ad,"soyad":soyad,"numara":numara}
-    dosya.write(str(yazilacak)+"\n")
+    telefon= input("Numara: ")
+    kayit1 = Kayit(ad,soyad,telefon)
+    print("Kaydedilecek bilgi: ")
+    print(kayit1)
+    dosya.write(str(kayit1)+"\n")
     dosya.close()
 
 def listele():
