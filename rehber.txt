@@ -1,6 +1,4 @@
 {'ad': 'Ediz', 'soyad': 'Hoş', 'numara': '123458574'}
-<class '__main__.Kayit'>
-<class '__main__.Kayit'>
-<class '__main__.Kayit'>
-Kıvanç SARI 5236985478
-Doruk KARA 8546523254
+{'ad': 'U�urhan', 'soyad': 'AL', 'numara': '1234321232'}
+{'ad': 'Kadir', 'soyad': '�NANIR', 'numara': '5847521452'}
+{'ad': 'Ahmet', 'soyad': 'BOZ', 'numara': '8563254125'}

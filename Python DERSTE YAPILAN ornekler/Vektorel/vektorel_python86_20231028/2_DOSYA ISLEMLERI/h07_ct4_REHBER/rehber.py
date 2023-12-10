@@ -26,22 +26,30 @@ def menu():
         listele()
         menu()
         
+    if secim == "4": 
+        sil()
+        menu()
+        
 def rehbereEkle():
     dosya = open("rehber.txt","a")
     
     # kayit1 = Kayit
-    # kayit1.ad =    input("Ad    : ")
-    # kayit1.soyad = input("Soyad : ")
-    # kayit1.telefon= input("Numara: ")
-    # yazilacak = {"ad":ad,"soyad":soyad,"numara":numara}
-    # dosya.write(str(yazilacak)+"\n")
+    # veriyi dictionary kullarak kaydetme
     ad =    input("Ad    : ")
     soyad = input("Soyad : ")
     telefon= input("Numara: ")
-    kayit1 = Kayit(ad,soyad,telefon)
-    print("Kaydedilecek bilgi: ")
-    print(kayit1)
-    dosya.write(str(kayit1)+"\n")
+    yazilacak = {"ad":ad,"soyad":soyad,"numara":telefon}
+    dosya.write(str(yazilacak)+"\n")
+    
+    # nesne kullanarak kaydetme
+    # ad =    input("Ad    : ")
+    # soyad = input("Soyad : ")
+    # telefon= input("Numara: ")
+    # kayit1 = Kayit(ad,soyad,telefon)
+    # print("Kaydedilecek bilgi: ")
+    # print(kayit1)
+    # dosya.write(str(kayit1)+"\n")
+
     dosya.close()
 
 def listele():
@@ -53,8 +61,9 @@ def listele():
         kayit = {}
         for k in dosya.readlines():
             kayit = k
-            for a in kayit:
-                print(a)
+            print(k)
+            # for a in kayit:
+            #     print(a)
             # print(a, kayit)
             a += 1
     except:
@@ -62,5 +71,7 @@ def listele():
         print("Devam etmek için Enter'a basın.")
         input()
 
+def sil():
+    pass
 
 menu()

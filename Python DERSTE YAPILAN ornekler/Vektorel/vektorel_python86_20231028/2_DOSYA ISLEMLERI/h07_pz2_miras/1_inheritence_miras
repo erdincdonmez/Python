@@ -1,0 +1,62 @@
+class Ilan:
+    def __init__ (self,x,y,z,abc="0",puan="0"):
+        self.ilanno = x
+        self.baslik = y
+        self.aciklama = z
+        self.pidno = abc
+        self.puan = puan
+    def __str__(self) -> str:
+        return f"İlan no: {self.ilanno}, puanı: {self.puan}"
+    def bilgi(self):
+        print(f"İlan no: {self.ilanno}, puanı: {self.puan}")
+
+class Emlak(Ilan): # miras alınan sınıf Ilan
+    def __init__ (self,gilanno,gbaslik,gaciklama,gadres,gfiyat):
+        # self.ilanno = gilanno
+        # self.baslik = gbaslik
+        # self.aciklama = gaciklama
+        super().__init__(gilanno,gbaslik,gaciklama)
+        self.adres = gadres
+        self.fiyat = gfiyat
+    def __str__(self) -> str:
+        # super().__str__()
+        return f"Emlak fiyatı: {self.fiyat}"
+    def bilgi(self):
+            print(f"İlan no: {int(self.ilanno)+2}, puanı: {self.puan} {self.adres}")
+
+class Konut(Emlak):
+    def __init__(self, gilanno, gbaslik, gaciklama, gadres, gfiyat,gmkare):
+        super().__init__(gilanno, gbaslik, gaciklama, gadres, gfiyat)
+        self.mkare = gmkare
+    def __str__(self) -> str:
+        return super().__str__() + f" Mkaresi :{self.mkare}"
+    def bilgi(self):
+            print(f"İlan no: {int(self.ilanno)*2}, puanı: {self.puan}")
+
+class Arac(Ilan):
+    def __init__(self, x, y, z, gmarka, gmodel):
+        super().__init__(x, y, z)
+        self.marka = gmarka
+        self.model = gmodel
+    def __str__(self) -> str:
+        return  super().__str__() + f" Markası :{self.marka}"
+    def bilgi(self):
+            print(f"İlan no: {int(self.ilanno)/2}, puanı: {self.puan} {self.marka}")
+
+
+
+ilan1 = Ilan("452","Satılık villa","Sahibin kelepir villa.")
+ilan2 = Emlak("222","Satılık villa","Sahibin kelepir villa.","Ankara kösrelik","3000000")
+ilan3 = Konut("432","Satılık villa","Sahibin kelepir villa.","Ankara kösrelik","3000000","300")
+ilan4 = Arac("874","Hatasız sıfır ayarında tofaş","Aracım 210binde. Servis bakımları yapıldı.","Tofaş","Şahin")
+
+print(ilan1)
+print(ilan1.baslik)
+print(ilan3.mkare)
+print("İlan bilgisi: ",ilan4)
+print("İlan bilgisi: ",ilan3)
+ilan1.bilgi()
+ilan2.bilgi()
+ilan3.bilgi()
+ilan4.bilgi()
+

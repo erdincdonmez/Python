@@ -1,0 +1,62 @@
+('D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python DERSTE '
+ 'YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+ 'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\rehber.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\build\\rehber\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\vektorel\\AppData\\Roaming\\Python\\Python310\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\vektorel\\AppData\\Roaming\\Python\\Python310\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('rehber',
+   'D:\\Ptyhon-86 Erdinç DÖNMEZ\\Ders ornekleri Python-86\\Python\\Python '
+   'DERSTE YAPILAN ornekler\\Vektorel\\vektorel_python86_20231028\\2_DOSYA '
+   'ISLEMLERI\\h07_ct4_REHBER\\rehber.py',
+   'PYSOURCE')],
+ 'python310.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
