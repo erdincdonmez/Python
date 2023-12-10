@@ -1,4 +1,0 @@
-setc = {"apple", "banana", "cherry"}
-
-for xx in setc:
-    print(xx)

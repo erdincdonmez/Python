@@ -1,0 +1,1 @@
+dosya = open("deneme.dat","a")
