@@ -1,18 +1,18 @@
-class araclar():
+class Arac():
     tip = "arac"
-    uretici = "mercedes"
+    uretici = "tanımsız"
 
-print("araclar sınıfı için")
-print("Arac tipi     :",araclar.tip)
-print("Arac ureticisi:",araclar.uretici)
+print("Arac sınıfı orellikleri")
+print("Arac tipi     :",Arac.tip)
+print("Arac ureticisi:",Arac.uretici)
 
-arac1=araclar() # Sınıftan Ornekleme
+arac1=Arac() # Sınıftan Ornekleme
 
 print("\narac1 Nesne örneği için")
 print("Arac tipi     :",arac1.tip) # değer atamadığım için default olanlar gelecek.
 print("Arac ureticisi:",arac1.uretici)
 
-arac2=araclar() # Sınıftan Ornekleme
+arac2=Arac() # Sınıftan Ornekleme
 arac2.tip="Araba"
 arac2.uretici="volvo"
 print("\narac2 Nesne örneği için")
