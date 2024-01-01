@@ -18,6 +18,10 @@ aşağıdaki komutları cmd ekranına yada terminale yazınız.
 <p>Bu alanda kullanıcı adı ve şifresinizi doğru girmeniz gerekmektedir.</p>
 <p>3 yanlış deneme sonunda program girişe izin vermeyerek kapanacaktır.</p>
 
-<h2>Proje Ana ekranı</h2>
+<h2>Proje ana ekranı</h2>
 
 ![](projeResimleri/anaekran.PNG)
+
+<h2>Öğrenci takip ekranı</h2>
+
+![](projeResimleri/ogrenciTakip1.PNG)
