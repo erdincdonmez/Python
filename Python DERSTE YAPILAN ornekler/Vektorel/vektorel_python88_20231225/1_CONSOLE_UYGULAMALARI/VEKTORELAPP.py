@@ -1,4 +1,6 @@
-import hesapmakinesi.hesaplamalar
+import hesapmakinesi.hesaplamalar # 1
+##import hesapmakinesi.hesaplamalar as hm
+##from hesapmakinesi.hesaplamalar import *
 import oyunlar.oyun
 
 def anamenu():
@@ -17,6 +19,8 @@ def anamenu():
     secim = input()
     if secim == "1" :
         hesapmakinesi.hesaplamalar.hmmenu()
+##        hm.hmmenu()
+##        hmmenu()
         anamenu()
     if secim == "2" :
         oyunlar.oyun.oyunmenu()
@@ -27,5 +31,6 @@ def anamenu():
     # 188 ╝
 
 
+print(dir(hesapmakinesi.hesaplamalar))
 anamenu()
 ##hesapmakinesi()
