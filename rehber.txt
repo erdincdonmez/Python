@@ -1,4 +1,0 @@
-{'ad': 'Ediz', 'soyad': 'HoÅŸ', 'numara': '123458574'}
-{'ad': 'Uï¿½urhan', 'soyad': 'AL', 'numara': '1234321232'}
-{'ad': 'Kadir', 'soyad': 'ÝNANIR', 'numara': '5847521452'}
-{'ad': 'Ahmet', 'soyad': 'BOZ', 'numara': '8563254125'}
