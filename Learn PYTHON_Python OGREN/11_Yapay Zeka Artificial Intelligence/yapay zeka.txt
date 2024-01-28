@@ -1,0 +1,8 @@
+Yapay zeka içeriği
+
+Temel python bilmelisiniz.
+YZ giriş ve YZ algoritmaları
+Veri bilimi ve yapay zeka
+Görüntü işleme
+Doğal dil işleme
+Makine öğrenmesi
