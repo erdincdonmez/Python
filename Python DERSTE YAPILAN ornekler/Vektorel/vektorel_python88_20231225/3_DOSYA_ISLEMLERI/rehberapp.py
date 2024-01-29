@@ -12,7 +12,7 @@ def menu():
     print("╚═════════════════════╝")
     # 201 ╔ 187 ╗ 200 ╚  # 188 ╝
 
-    secim = input()
+    secim = input("")
     if secim=="1":
         listele()
         kisiEkle()
@@ -33,15 +33,19 @@ def kisiEkle():
     menu()
 
 def listele():
-    dosya = open("rehber.txt","r")
-    print("╔════════════════════════════╗")
-    print("║  Kayıtlı kişiler           ║")
-    print("╚════════════════════════════╝")
-    okunan = dosya.read()
-    print(okunan)
-    dosya.close()
-    
-
-
-        
+    try:
+        dosya = open("rehber.txt","r")
+        print("╔════════════════════════════╗")
+        print("║  Kayıtlı kişiler           ║")
+        print("╚════════════════════════════╝")
+        okunan1 = dosya.read()
+        print(okunan1)
+        print("-------------")
+        okunan2 = dosya.readline()
+        print(okunan2)
+        okunan3 = dosya.readline()
+        print(okunan3)
+        dosya.close()
+    except :
+        print("Bir hata oluştu")           
 menu()
