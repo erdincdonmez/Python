@@ -8,7 +8,7 @@ TITLE = "Oyun Adı"
 FPS = 30  
 
 uzayli = Actor('uzayli', (50, 240))
-arkaplan = Actor("arkaplan")
+arkaplan = Actor("uzaylı_arkaplan")
 
 def draw():
     arkaplan.draw()

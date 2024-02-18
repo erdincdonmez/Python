@@ -9,13 +9,11 @@ FPS = 30 # Saniyedeki Kare Sayısı
 
 # Nesneler
 uzayli = Actor('uzaylı', (150, 150))
-arkaplan = Actor("arkaplan")
+arkaplan = Actor("uzaylı_arkaplan")
 
 def draw():
     arkaplan.draw()
     uzayli.draw()
-
-durum = "zipladi"
 
 def update(dt):
     global durum
@@ -27,14 +25,6 @@ def update(dt):
         uzayli.y = uzayli.y - 5
     if keyboard.down:
         uzayli.y = uzayli.y + 5
-    if keyboard.space:
-        if durum == "zipladi": 
-            uzayli.y = uzayli.y + 10
-            durum = "yerde"
-        else: 
-            uzayli.y = uzayli.y - 10
-            durum = "zipladi"
-
 
 pgzrun.go() 
 
