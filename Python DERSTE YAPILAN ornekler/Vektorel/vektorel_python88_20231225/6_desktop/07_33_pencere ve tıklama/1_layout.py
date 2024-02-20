@@ -2,17 +2,17 @@
 from PyQt6.QtWidgets import *
 aa = QApplication([])
 
-pencere = QWidget()
+ww = QWidget()
 
-icerik = QVBoxLayout()
+icerik = QHBoxLayout()
 
 icerik.addWidget(QPushButton('Tıkla'))
 icerik.addWidget(QPushButton('Dene'))
 icerik.addWidget(QLabel('Bilgi'))
 
-pencere.setLayout(icerik)
+ww.setLayout(icerik)
 
-pencere.show()
+ww.show()
 aa.exec()
 
 
