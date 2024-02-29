@@ -83,6 +83,12 @@ def on_key_down(key):
         karakter.y += hucre.height
     elif keyboard.up and karakter.y - hucre.height > hucre.height:
         karakter.y -= hucre.height
+        
+    dusman_numara = karakter.collidelist(dusmanlar)
+    if dusman_numara != -1:
+        dusman = dusmanlar[dusman_numara]
+        dusman.health -= karakter.attack
+        karakter.health -= dusman.attack
 
 pgzrun.go()
 

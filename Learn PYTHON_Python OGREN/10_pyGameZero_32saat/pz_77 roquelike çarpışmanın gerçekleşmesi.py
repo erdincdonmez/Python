@@ -73,6 +73,8 @@ def draw():
         dusmanlar[i].draw()
     
 def on_key_down(key):
+    eski_x = karakter.x
+    eski_y = karakter.y
     if keyboard.right and karakter.x + hucre.width < WIDTH - hucre.width:
         karakter.x += hucre.width
         karakter.image = 'karakter'
@@ -83,6 +85,16 @@ def on_key_down(key):
         karakter.y += hucre.height
     elif keyboard.up and karakter.y - hucre.height > hucre.height:
         karakter.y -= hucre.height
+    
+    dusman_numara = karakter.collidelist(dusmanlar)
+    if dusman_numara != -1:
+        karakter.x = eski_x
+        karakter.y = eski_y
+        dusman = dusmanlar[dusman_numara]
+        dusman.health -= karakter.attack
+        karakter.health -= dusman.attack
+        if dusman.health <= 0:
+            dusmanlar.pop(dusman_numara)
 
 pgzrun.go()
 

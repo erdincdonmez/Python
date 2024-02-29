@@ -39,7 +39,12 @@ for i in range(5):
     dusman = Actor("düşman", topleft = (x, y))
     dusman.health = random.randint(10, 20)
     dusman.attack = random.randint(5, 10)
+    dusman.bonus = random.randint(0, 2)
     dusmanlar.append(dusman)
+
+# Bonuses
+kalpler = []
+kiliclar = []
 
 def harita_cizim():
     for i in range(len(haritam)):
@@ -71,18 +76,55 @@ def draw():
     screen.draw.text(str(karakter.attack), center=(425, 475), color = 'white', fontsize = 20)
     for i in range(len(dusmanlar)):
         dusmanlar[i].draw()
+    for i in range(len(kalpler)):
+        kalpler[i].draw()
+    for i in range(len(kiliclar)):
+        kiliclar[i].draw()
     
 def on_key_down(key):
-    if keyboard.right and karakter.x + hucre.width < WIDTH - hucre.width:
+    eski_x = karakter.x
+    eski_y = karakter.y
+    if keyboard.right or keyboard.d and karakter.x + hucre.width < WIDTH - hucre.width:
         karakter.x += hucre.width
         karakter.image = 'karakter'
-    elif keyboard.left and karakter.x - hucre.width > hucre.width:
+    elif keyboard.left or keyboard.a and karakter.x - hucre.width > hucre.width:
         karakter.x -= hucre.width
         karakter.image = 'sol'
-    elif keyboard.down and karakter.y + hucre.height < HEIGHT - hucre.height*2:
+    elif keyboard.down or keyboard.s and karakter.y + hucre.height < HEIGHT - hucre.height*2:
         karakter.y += hucre.height
-    elif keyboard.up and karakter.y - hucre.height > hucre.height:
+    elif keyboard.up or keyboard.w and karakter.y - hucre.height > hucre.height:
         karakter.y -= hucre.height
+    
+    dusman_numara = karakter.collidelist(dusmanlar)
+    if dusman_numara != -1:
+        karakter.x = eski_x
+        karakter.y = eski_y
+        dusman = dusmanlar[dusman_numara]
+        dusman.health -= karakter.attack
+        karakter.health -= dusman.attack
+        if dusman.health <= 0:
+            if dusman.bonus == 1:
+                kalp = Actor('kalp')
+                kalp.pos = dusman.pos
+                kalpler.append(kalp)
+            elif dusman.bonus == 2:
+                kilic = Actor('kılıç')
+                kilic.pos = dusman.pos
+                kiliclar.append(kilic)
+            dusmanlar.pop(dusman_numara)
+
+def update(dt):
+    for i in range(len(kalpler)):
+        if karakter.colliderect(kalpler[i]):
+            karakter.health += 5
+            kalpler.pop(i)
+            break
+        
+    for i in range(len(kiliclar)):
+        if karakter.colliderect(kiliclar[i]):
+            karakter.attack += 5
+            kiliclar.pop(i)
+            break
 
 pgzrun.go()
 

@@ -14,15 +14,15 @@ HEIGHT = hucre.height * ekran_y
 TITLE = "Zindanlar" # Oyunun Adı
 FPS = 30 # Saniyedeki Kare Sayısı
 haritam = [[0, 0, 0, 0, 0, 0, 0, 0, 0], 
-           [0, 1, 1, 1, 1, 1, 1, 1, 0], 
-           [0, 1, 1, 2, 1, 3, 1, 1, 0], 
-           [0, 1, 1, 1, 2, 1, 1, 1, 0], 
-           [0, 1, 3, 2, 1, 1, 3, 1, 0], 
-           [0, 1, 1, 1, 1, 3, 1, 1, 0], 
-           [0, 1, 1, 3, 1, 1, 2, 1, 0], 
-           [0, 1, 1, 1, 1, 1, 1, 1, 0], 
-           [0, 0, 0, 0, 0, 0, 0, 0, 0],
-           [-1, -1, -1, -1, -1, -1, -1, -1, -1]] # Hücüm Gücü ve Sağlık bilgisi
+          [0, 1, 1, 1, 1, 1, 1, 1, 0], 
+          [0, 1, 1, 2, 1, 3, 1, 1, 0], 
+          [0, 1, 1, 1, 2, 1, 1, 1, 0], 
+          [0, 1, 3, 2, 1, 1, 3, 1, 0], 
+          [0, 1, 1, 1, 1, 3, 1, 1, 0], 
+          [0, 1, 1, 3, 1, 1, 2, 1, 0], 
+          [0, 1, 1, 1, 1, 1, 1, 1, 0], 
+          [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          [-1, -1, -1, -1, -1, -1, -1, -1, -1]] # Hücüm Gücü ve Sağlık bilgisi
 
 # Başrol Karakteri
 karakter = Actor('karakter')
@@ -39,7 +39,12 @@ for i in range(5):
     dusman = Actor("düşman", topleft = (x, y))
     dusman.health = random.randint(10, 20)
     dusman.attack = random.randint(5, 10)
+    dusman.bonus = random.randint(0, 2)
     dusmanlar.append(dusman)
+
+# Bonuses
+kalpler = []
+kiliclar = []
 
 def harita_cizim():
     for i in range(len(haritam)):
@@ -71,8 +76,14 @@ def draw():
     screen.draw.text(str(karakter.attack), center=(425, 475), color = 'white', fontsize = 20)
     for i in range(len(dusmanlar)):
         dusmanlar[i].draw()
+    for i in range(len(kalpler)):
+        kalpler[i].draw()
+    for i in range(len(kiliclar)):
+        kiliclar[i].draw()
     
 def on_key_down(key):
+    eski_x = karakter.x
+    eski_y = karakter.y
     if keyboard.right and karakter.x + hucre.width < WIDTH - hucre.width:
         karakter.x += hucre.width
         karakter.image = 'karakter'
@@ -83,6 +94,24 @@ def on_key_down(key):
         karakter.y += hucre.height
     elif keyboard.up and karakter.y - hucre.height > hucre.height:
         karakter.y -= hucre.height
+    
+    dusman_numara = karakter.collidelist(dusmanlar)
+    if dusman_numara != -1:
+        karakter.x = eski_x
+        karakter.y = eski_y
+        dusman = dusmanlar[dusman_numara]
+        dusman.health -= karakter.attack
+        karakter.health -= dusman.attack
+        if dusman.health <= 0:
+            if dusman.bonus == 1:
+                kalp = Actor('kalp')
+                kalp.pos = dusman.pos
+                kalpler.append(kalp)
+            elif dusman.bonus == 2:
+                kilic = Actor('kılıç')
+                kilic.pos = dusman.pos
+                kiliclar.append(kilic)
+            dusmanlar.pop(dusman_numara)
 
 pgzrun.go()
 
