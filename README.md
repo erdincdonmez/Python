@@ -7,6 +7,7 @@
 > - Masaüstü geliştirme
 > - Veritabanı
 > - Web geliştirme
+> - PyGameZero
 
 ## Derslerde yapılan örnekler ve 
 
