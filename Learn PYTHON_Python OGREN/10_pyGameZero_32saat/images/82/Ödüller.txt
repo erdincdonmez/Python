@@ -1,0 +1,4 @@
+Ödül seçenekleri:
+     1. Sağlığı artırmak için ödül
+     2. Hücum gücünü artırmak için ödül
+     3. Daha fazla puan kazanmak için ödül

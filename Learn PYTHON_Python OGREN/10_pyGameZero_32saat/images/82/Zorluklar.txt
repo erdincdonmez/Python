@@ -1,0 +1,17 @@
+Zorluk artışı, oyun içerisinde farkedilmeden sorunsuz bir şekilde 
+gerçekleştirilmelidir;
+
+Zorluğu şu şekilde artırabilirsiniz:
+     1. Belirli bir periyodta.
+     Örneğin: her 10 saniyede (bir zamanlayıcıya ihtiyacınız var)
+     2. Belirli sayıda puan toplandıktan sonra
+     Örneğin: her 100 puanda bir zorluk artar
+
+Neler değiştirilebilir:
+     1. Düşman özellikleri
+     (hız, sağlık, hücum gücü)
+     2. Ana karakterin özellikleri
+     (hız, sağlık, hücum gücü)
+     3. Oyunun görsel özellikleri
+     (arkaplan, düşmanların görünümleri / ana karakter)
+     4. Kontrol mantığı

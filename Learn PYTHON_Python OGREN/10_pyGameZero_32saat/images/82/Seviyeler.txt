@@ -1,0 +1,21 @@
+Seviye değişikliği daha belirgin bir şekilde gerçekleşir.
+Ana menüye, belirli bir seviye geçildikten sonra aktif hale gelecek olan
+seviyeyi seçebilmek için butonlar eklenebilir.
+
+Seviyeleri şu şekilde değiştirebilirsiniz:
+    1. Seviyenin amacını gerçekleştirerek
+    (bütün düşmanları yenmek, bütün ödülleri toplamak)
+    2. Bir seviye seçmek
+
+Neler değiştirilebilir:
+    1. Düşmanlar tamamen değiştirilebilir
+    (hareket, hücum, sağlık, görünüm, vb.)
+    2. Ana karakterin özellikleri
+    (hız, sağlık, hücum gücü)
+    3. Oyunun görsel özellikleri
+    (arkaplan, düşmanların görünümü / ana karakter)
+    4. Haraket mantığı
+    Örneğin: birinci seviyede, amaç tüm düşmanları yenmek,
+    ikincide - tüm ödülleri toplamak,
+    üçüncüde - olabildiğince fazla süre hayatta kalmak.
+
