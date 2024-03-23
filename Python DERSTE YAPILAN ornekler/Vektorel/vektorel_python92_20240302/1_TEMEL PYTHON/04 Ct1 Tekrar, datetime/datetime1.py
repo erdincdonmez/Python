@@ -1,0 +1,10 @@
+import datetime, random
+print("Tarih saat =", datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+print("Tarih saat =", datetime.datetime.now().strftime("%Y"))
+a = datetime.datetime.now().strftime("%Y")
+b = datetime.datetime.now().strftime("%m")
+c = datetime.datetime.now().strftime("%d")
+yil = int(a)+random.randint(1,5)
+ay = int(b)+random.randint(1,9)
+gun = int(c)+random.randint(1,7)
+print (yil,ay,gun)
