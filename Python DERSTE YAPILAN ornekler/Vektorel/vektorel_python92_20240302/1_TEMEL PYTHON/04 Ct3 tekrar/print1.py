@@ -1,4 +1,4 @@
-a = "Vektörel"
+a = "Vektörel bilişim"
 print("merhaba\
  nasılsın")
 
