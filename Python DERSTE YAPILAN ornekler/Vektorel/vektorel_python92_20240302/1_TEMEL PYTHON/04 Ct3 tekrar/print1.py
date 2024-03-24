@@ -1,6 +1,6 @@
 a = "Vektörel"
 print("merhaba\
- nasılsın")
+nasılsın")
 
 print(a[1:5])
 
