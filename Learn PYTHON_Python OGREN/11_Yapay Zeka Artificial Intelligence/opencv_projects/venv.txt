@@ -1,3 +1,8 @@
 E:\opencv_computer_vision
 E:\opencv_computer_vision\Scripts\activate
 E:\aErdinc\IS\Projeler\CALISILANDenemeDersOrnek\Python\Learn PYTHON_Python OGREN\11_Yapay Zeka Artificial Intelligence\opencv_projects>
+
+cd\
+opencv_computer_vision\Scripts\activate
+cd aErdinc\IS\Projeler\CALISILANDenemeDersOrnek\Python\Learn PYTHON_Python OGREN\11_Yapay Zeka Artificial Intelligence\opencv_projects
+cd aErdinc\IS\Projeler\CALISILANDenemeDersOrnek\Python\'Learn PYTHON_Python OGREN'\'11_Yapay Zeka Artificial Intelligence'\opencv_projects
