@@ -1,4 +1,4 @@
-# filreleme
+# filtreleme
 import cv2
 import numpy as np
 
@@ -7,7 +7,7 @@ r1 = cv2.pyrDown(r1)
 cv2.imshow("Orjinal1", r1)
 
 # np.array([hue, saturation, value])
-alt = np.array([0,200,0]) # lower
+alt = np.array([0,200,50]) # lower
 ust = np.array([10,250,255]) # upper
 
 hsv_sekli = cv2.cvtColor(r1, cv2.COLOR_BGR2HSV)
@@ -25,5 +25,3 @@ cv2.imshow("inrange_ile_maskeli_sekli", inrange_ile_maskeli_sekli)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
