@@ -1,0 +1,6 @@
+{'Adi': 'Atakan', 'Numarasi': '05326587452'}
+{'Adi': 'Ertan Öner', 'Numarasi': '05336325478'}
+{'Adi': 'Ömer', 'Numarasi': '5632541254'}
+{'Adi': 'Mahir', 'Numarasi': '5236587452'}
+{'Adi': 'Gökhan', 'Numarasi': '50798563254'}
+{'Adi': 'Atakan', 'Numarasi': '532'}'Adi' : er , 'Numarasi' : 23{'Adi' : ee , 'Numarasi' : 333}{'adi': 'rr', 'num': '44'},
