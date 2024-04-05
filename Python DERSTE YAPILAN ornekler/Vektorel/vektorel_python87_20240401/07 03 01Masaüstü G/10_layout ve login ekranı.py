@@ -5,14 +5,22 @@ class girisPenceresi(QMainWindow):
         super().__init__()
         self.setWindowTitle("Çevirici")
         
-        icerik = QVBoxLayout()
-        icerik.addWidget(QLabel("Çevrilecek Değer (cm):"))
-        self.veri = QLineEdit()
+        # icerik = QHBoxLayout() # Yatay içerik için
+        icerik = QVBoxLayout() # Dikey içerik için
+        
+        icerik.addWidget(QLabel("Kullanıcı adı:"))
+        self.ka = QLineEdit()
+        icerik.addWidget(self.ka)
+        
 
-        icerik.addWidget(self.veri)
-        hesapla = QPushButton("Çevir")
-        icerik.addWidget(hesapla)
-        hesapla.clicked.connect(self.tiklama)
+        icerik.addWidget(QLabel("Şifre:"))
+        self.sf = QLineEdit()
+        icerik.addWidget(self.sf)
+        girisButton = QPushButton("Giriş yap")
+        icerik.addWidget(girisButton)
+
+        girisButton.clicked.connect(self.kontrolEt)
+
         self.sonuc = QLabel("Inch karşılığı:")
         icerik.addWidget(self.sonuc)
         
@@ -25,13 +33,18 @@ class girisPenceresi(QMainWindow):
         self.sonuc.setText("Inch karşılığı: "+ str(int(self.veri.text())*2) )
         # print("Butona tıklandı."+ int(str(self.veri.text()))*2)
     
-    def mesajGoster(self):
+    def mesajGoster(self,mesaj):
         mesaj = QMessageBox()
-        mesaj.setText("Butona tıklandı")
+        mesaj.setText(mesaj)
         mesaj.exec()
     
-    def tiklama(self):
-        self.hesaplama()
+    def kontrolEt(self):
+        if self.ka.text() == "admin" and self.sf.text() == "123":
+            # self.mesajGoster("Girebilir")
+            print("Giriş yapabilir")
+        else:
+            # self.mesajGoster("Hatalı giriş yaptınız")
+            print("Hatalı giriş yaptınız")
         # self.mesajGoster()
 
 app = QApplication([])
