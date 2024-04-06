@@ -1,2 +1,2 @@
-f = open("Dosyalar - Okuma-1.py", "r")
+f = open("Dosyalar - Okuma-1.txt", "r")
 print(f.read(5))
