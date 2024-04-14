@@ -9,7 +9,8 @@ cv2.imshow('Boyulandirilmis', r1Boyutlandirilmis)
 print("Resim boyutu", r1Boyutlandirilmis.shape)
 
 # Boyutlandirilmisfxile = cv2.resize(r1, (g*2,y*2))
-Boyutlandirilmisfxile = cv2.resize(r1, None, fx=.5, fy=1)
+# Boyutlandirilmisfxile = cv2.resize(r1, None, fx=.5, fy=1)
+Boyutlandirilmisfxile = cv2.resize(r1, None, fx=.5, fy=1, interpolation=cv2.INTER_CUBIC)
 cv2.imshow('fx ile boyutlandirilmis', Boyutlandirilmisfxile)
 
 cv2.waitKey(0)
