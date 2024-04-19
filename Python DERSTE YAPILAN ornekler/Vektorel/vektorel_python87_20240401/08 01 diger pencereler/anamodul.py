@@ -8,7 +8,7 @@ class AnaEkran(QMainWindow):
         vt = sqlite3.connect('rehber.db')
         im = vt.cursor()
 
-        im.execute("""CREATE TABLE 'personel dosyasi'
+        im.execute("""CREATE TABLE IF NOT EXIST 'personel dosyasi'
         (ismi', soyismi', memleket)""")
 
     def __init__(self):
