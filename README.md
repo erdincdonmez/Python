@@ -1,3 +1,8 @@
+<h1 style="color:red">Masaüstü rehber uygulaması</h1>
+<h2>Giriş ekranı</h2>
+<img height="200" src="resimler/sifreEkrani.PNG"/>
+<p>Uygulamamız....</p>
+
 <img  width="300" src="https://assets-v2.lottiefiles.com/a/62e02bc6-116f-11ee-aeb0-077c335b3c67/XpwfUikILP.gif" alt="Örnek Resim"/>
 # PYTHON repository [erdincdonmez.com]
 ## Python Öğrenmek için örnekler

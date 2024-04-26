@@ -6,9 +6,10 @@ class TicariWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Inch çevirici")
-        self.arayuz()
+    #     self.arayuz()
+    #     # self.arayuzTCLi()
 
-    def arayuz(self):
+    # def arayuz(self):
         central_widget = QWidget()
         layout = QVBoxLayout()
 
@@ -40,5 +41,6 @@ def main():
     window.show()
     sys.exit(app.exec())
 
+# main()
 if __name__ == "__main__":
     main()
