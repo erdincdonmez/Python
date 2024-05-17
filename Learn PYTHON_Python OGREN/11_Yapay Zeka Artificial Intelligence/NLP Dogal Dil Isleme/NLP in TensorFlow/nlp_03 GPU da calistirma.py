@@ -17,8 +17,9 @@ def bol(gelen):
     return tf.strings.split(gelen)
 
 # TextVectorization normalde CPU'da çalışır. Data pipline veya model içerisine yerleştirilirse GPU'da çalışırak daha hızlı işlem yapar.
+# Aşağıda text vectorization katmanının model içinde kullanımı örneği var.
 tv = TextVectorization(
-    duzeltilmisSekli = standartlarstir, bolunmusSekli = bol
+    standardize = standartlarstir, split = bol
 )
 
 tv.adapt(veri)
