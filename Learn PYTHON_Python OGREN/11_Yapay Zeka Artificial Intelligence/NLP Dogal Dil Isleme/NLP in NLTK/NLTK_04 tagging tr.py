@@ -1,6 +1,12 @@
 import nltk
-# nltk.download('punkt') # Bir kere yapılması gerek/yeter
 from nltk.tokenize import sent_tokenize, word_tokenize
+
+try: nltk.find('tokenizers/punkt') # yoksa downlad et.
+except LookupError: nltk.download('punkt')
+try: nltk.find('stopwords') # yoksa downlad et. 
+except LookupError: nltk.download('stopwords')
+try: nltk.find('averaged_perceptron_tagger') 
+except: nltk.download('averaged_perceptron_tagger') 
 
 ornek_metin = """Parayı Veren Düdüğü Çalar
 Çocuklar, pazara gelen Nasreddin Hoca'nın etrafını sarmış. “Hoca, bana düdük al!” demiş biri. “Bana da, bana da!” demiş bir diğeri.
@@ -17,31 +23,26 @@ Nasrettin Hoca gülerek,
 cumleler = sent_tokenize(ornek_metin)
 kelimeler = word_tokenize(ornek_metin)
 
-# print(cumleler)
-# print("Kelime listesi: ",kelimeler)
+# print("Cümle listesi  : ",cumleler); ; # print("Kelime listesi : ",kelimeler)
 
-# nltk.download("stopwords") # Bir kere indirilmesi gerek/yeterli
 from nltk.corpus import stopwords
 
-stop_words_tr = set(stopwords.words("turkish")) # stop word = köksüz/anlamsız kelimeler
-temizlenmis_liste = []
-print("Stop words Türkçe:",stop_words_tr)
+# stop_words = set(stopwords.words("english")) # stop word = anlamsız kelimeler
+# print("Stop words:",stop_words)
+stop_words = set(stopwords.words("turkish")) # stop word = köksüz/anlamsız kelimeler
+# print("Stop words Türkçe:",stop_words)
 
+temizlenmis_liste = []
 for kelime in kelimeler:
-   if kelime.casefold() not in stop_words_tr: # casefold ile küçükharfe çevir.
-        temizlenmis_liste.append(kelime)
-        
+   if kelime.casefold() not in stop_words: # casefold ile küçükharfe çevir.
+        temizlenmis_liste.append(kelime)        
 print("\nTemizlenmiş liste: ",temizlenmis_liste)
 
 # from nltk.stem import PorterStemmer
 # stemmer = PorterStemmer()
+
 # kok_cikarilmis_liste = [stemmer.stem(kelime) for kelime in temizlenmis_liste]
 
-# pip install snowballstemmer
-from snowballstemmer import TurkishStemmer
-turkStem=TurkishStemmer()
-# turkStem.stemWord("ekmekler") #ekmek
+# print("\nKökleri çıkarılmış liste:",kok_cikarilmis_liste)
 
-kok_cikarilmis_liste = [turkStem.stemWord(kelime) for kelime in temizlenmis_liste]
-
-print("\nKökleri çıkarılmış liste:",kok_cikarilmis_liste)
+print("\nEtiketlenmiş kelimeler: ",nltk.pos_tag(kelimeler))
