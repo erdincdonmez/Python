@@ -75,7 +75,7 @@ svr_tuned = SVR(kernel="linear",C=0.5).fit(X_train, y_train)
 y_pred = svr_tuned.predict(X_test)
 # final modelinin test hatası
 fmth = np.sqrt(mean_squared_error(y_test, y_pred))
-print("\n\nFinal modeli test hatası:",fmth)
+print("\n\nFinal modeli test hatası:",fmth) 
 
 
 
