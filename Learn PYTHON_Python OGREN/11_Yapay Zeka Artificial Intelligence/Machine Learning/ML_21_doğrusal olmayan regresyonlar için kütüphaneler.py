@@ -7,7 +7,7 @@ from sklearn.preprocessing import scale
 from sklearn.preprocessing import StandardScaler
 from sklearn import model_selection
 from sklearn.linear_model import LinearRegression
-from sklearn.tree import DecisionTreeRegression
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.neural_network import MLPRegressor
 from sklearn.ensemble import RandomForestRegressor

@@ -29,7 +29,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 # print("\n\nX_train verisi:\n",X_train)
 print("\n\nX_train verisinin ilk 5 satırı:\n",X_train.head())
 
-# Model kurulumu
+# KNN Modeli kurulumu
 knn_model = KNeighborsRegressor().fit(X_train,y_train)
 
 # Modele göz atalım
