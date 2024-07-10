@@ -47,11 +47,32 @@ print("rf_model parametreleri:", rf_model.get_params())
 
 # Burada yazılan deneme parametreleri uzmanların makalelerinden alınan değerlerdir.
 # Başka değerlerle de denenebilir tabii ki.
-rf_parametreleri = {"max_depth":[5,8,10],
+rf_parametreleri = {"max_depth":[3,5], # işlemci iyi ise [5,8,10] olarak deneyebilirsiniz.
                     "max_features":[2,5,10],
                     "n_estimators":[200,500,1000,2000],
-                    "min_sample_split":[2,10,80,100]}
+                    "min_samples_split":[2,10,80,100]}
 
-GridSearchCV(rf_model, rf_parametreleri, cv=10, n_jobs=-1,verbose=2).fit(X_train, y_train)
-dk.5:19
+rf_cv_model = GridSearchCV(rf_model, rf_parametreleri, cv=10, n_jobs=-1,verbose=2).fit(X_train, y_train)
+print("Grid Search CV ile en iyi parametreler:",rf_cv_model.best_params_)
 
+rf_model = RandomForestRegressor(random_state = 42,
+                                 max_depth = 3, # işlemci iyi ise 8 olarak deneyebilirsiniz.
+                                 max_features = 2,
+                                 min_sample_split = 2,
+                                 n_estimators = 200
+                                 )
+rf_tuned = rf_model.fit(X_train, y_train)
+print("\n\nrf_tuned: ",rf_tuned)
+
+y_pred = rf_tuned.predict(X_test)
+hkokk = np.sqrt(mean_squared_error(y_test, y_pred))
+print("\n\ntuned hkokk:",hkokk)
+
+#! Değişken önem düzeyi
+print("Değişkenlerin önemi:",rf_tuned.feature_importances_*100)
+
+Importance = pd.DataFrame({"Inportance":rf_tuned.feature_importtances_*100},index=X_train.columns)
+Importance.sort_values(by = "Importance",axis=0,ascending=True).plot(kind="barh",color="r",)
+
+plt.xlabel("Değişkenlerin önemi grafiği")
+plt.gca().legend_ = None
