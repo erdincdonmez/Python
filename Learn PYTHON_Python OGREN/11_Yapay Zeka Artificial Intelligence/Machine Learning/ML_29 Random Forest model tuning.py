@@ -34,24 +34,24 @@ print("\n\nX_train verisinin ilk 5 satırı:\n",X_train.head())
 #! model kurulumu
 rf_model = RandomForestRegressor(random_state = 42).fit(X_train, y_train)
 print("\n\nRandom forest modelinin parametreleri:\n",rf_model.get_params())
-"""
-'bootstrap': True, # bootstrap abligation
-'ccp_alpha': 0.0, 'criterion': 'squared_error', 
-'max_depth': None, # derinlik
-'max_features': 1.0, # Bölünmelerde göz önünde bulundurulacak değişken sayısı
-'max_leaf_nodes': None, # max yaprak nodları
-'max_samples': None, 
-'min_impurity_decrease': 0.0, 
-'min_samples_leaf': 1, # Bir node taki min yaprak sayısı 
-'min_samples_split': 2, # Bir node bölünmeden önce min gözlem sayısı
-'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 
-'n_estimators': 100, # Kullanılacak olan ağaç sayısı
-'n_jobs': None, 
-'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False
-"""
+
 # tahmin yapalım
 y_pred = rf_model.predict(X_test)
 # ilkel test hatasına bakalım (haata karelerinin ortamasının karekökü)
 # Gerçek değerler (y_test) ile model tarafından tahmin edilen değerler (y_pred) arasındaki farkların karesinin ortalamasının karekökü
 fokkk = np.sqrt(mean_squared_error(y_test,y_pred))
 print("\n\nFarkların ortalamasının karesinin karekökü: ",fokkk)
+
+rf_model = RandomForestRegressor(random_state=42).fit(X_train, y_train)
+print("rf_model parametreleri:", rf_model.get_params())
+
+# Burada yazılan deneme parametreleri uzmanların makalelerinden alınan değerlerdir.
+# Başka değerlerle de denenebilir tabii ki.
+rf_parametreleri = {"max_depth":[5,8,10],
+                    "max_features":[2,5,10],
+                    "n_estimators":[200,500,1000,2000],
+                    "min_sample_split":[2,10,80,100]}
+
+GridSearchCV(rf_model, rf_parametreleri, cv=10, n_jobs=-1,verbose=2).fit(X_train, y_train)
+dk.5:19
+
