@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import scale
-from sklearn.tree import DecisionTreeRegressor
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
 
@@ -47,9 +46,9 @@ print("rf_model parametreleri:", rf_model.get_params())
 
 # Burada yazılan deneme parametreleri uzmanların makalelerinden alınan değerlerdir.
 # Başka değerlerle de denenebilir tabii ki.
-rf_parametreleri = {"max_depth":[3,5], # işlemci iyi ise [5,8,10] olarak deneyebilirsiniz.
+rf_parametreleri = {"max_depth":[3,5], # işlemci iyi ise [5,8,10] olarak deneyebilirsiniz. Hatta range(1,10) da kulanılabilir.
                     "max_features":[2,5,10],
-                    "n_estimators":[200,500,1000,2000],
+                    "n_estimators":[200,500,1000,2000], # Bazı araştırmalarda 500 ve 2000 değerinin ideal olduğu belirtilir.
                     "min_samples_split":[2,10,80,100]}
 
 rf_cv_model = GridSearchCV(rf_model, rf_parametreleri, cv=10, n_jobs=-1,verbose=2).fit(X_train, y_train)
@@ -58,7 +57,7 @@ print("Grid Search CV ile en iyi parametreler:",rf_cv_model.best_params_)
 rf_model = RandomForestRegressor(random_state = 42,
                                  max_depth = 3, # işlemci iyi ise 8 olarak deneyebilirsiniz.
                                  max_features = 2,
-                                 min_sample_split = 2,
+                                 min_samples_split = 2,
                                  n_estimators = 200
                                  )
 rf_tuned = rf_model.fit(X_train, y_train)
@@ -71,7 +70,7 @@ print("\n\ntuned hkokk:",hkokk)
 #! Değişken önem düzeyi
 print("Değişkenlerin önemi:",rf_tuned.feature_importances_*100)
 
-Importance = pd.DataFrame({"Inportance":rf_tuned.feature_importtances_*100},index=X_train.columns)
+Importance = pd.DataFrame({"Inportance":rf_tuned.feature_importances_*100},index=X_train.columns)
 Importance.sort_values(by = "Importance",axis=0,ascending=True).plot(kind="barh",color="r",)
 
 plt.xlabel("Değişkenlerin önemi grafiği")
