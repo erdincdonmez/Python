@@ -1,6 +1,5 @@
 #  XGBOOST algoritması
-import numpy as np
-import pandas as pd
+import numpy as np; import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import scale
@@ -55,6 +54,6 @@ xgb_tuned = XGBRegressor(colsample_bytree=.4,
                          max_depth=3,
                          n_estimator=100).fit(X_train, y_train)
 y_test = xgb_tuned.predict(X_test)
-ith = np.sqrt(mean_squared_error(y_test,y_pred))
-print("\n\nİlkel test hatası:",ith)
+th = np.sqrt(mean_squared_error(y_test,y_pred))
+print("\n\nTuned test hatası:",th)
 
