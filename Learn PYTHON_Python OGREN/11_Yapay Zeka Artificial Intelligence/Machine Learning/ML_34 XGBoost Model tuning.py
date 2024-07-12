@@ -33,10 +33,28 @@ print("\n\nX_train verisinin ilk 5 satırı:\n",X_train.head())
 # bilgisayar şifresini yaz, enter ile devam, agree ile kabul et.
 
 xgb = XGBRegressor().fit(X_train,y_train)
-print("\n\nxgb regresyon model parametreleri:\n",xgb.get_params())
+# print("\n\nxgb regresyon model parametreleri:\n",xgb.get_params())
 
 y_pred = xgb.predict(X_test)
 ilkel_test_hatasi = np.sqrt(mean_squared_error(y_test, y_pred))
 
 print("İlkel test hatası:",ilkel_test_hatasi)
+
+xgb_parametreleri = {"learning_rate":[.1,.01,.5], # Overfiting (aşırı öğrenme) yi engellemek için. Daraltma adım boyu
+                     "max_depth":[2,3,4,5,8], # ağaç derinliği
+                     "n_estimators":[100,200,500,1000], # Kullanılacak ağaç sayısı / tahminci sayısı
+                     "colsample_bytree":[.4,.7,1]
+                     }
+
+xgb_cv_model = GridSearchCV(xgb, xgb_parametreleri, cv= 10, n_jobs=-1, verbose=2).fit(X_train, y_train)
+
+print("\n\nxgb_cv_model.best_params_\n",xgb_cv_model.best_params_)
+
+xgb_tuned = XGBRegressor(colsample_bytree=.4,
+                         learning_rate=.5,
+                         max_depth=3,
+                         n_estimator=100).fit(X_train, y_train)
+y_test = xgb_tuned.predict(X_test)
+ith = np.sqrt(mean_squared_error(y_test,y_pred))
+print("\n\nİlkel test hatası:",ith)
 
