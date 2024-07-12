@@ -1,17 +1,10 @@
-import numpy as np
-import pandas as pd
+# SVR (Support Vector Regression/Destek Vektör Regresyonu)
+import numpy as np; import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.svm import SVR
-
-from warnings import filterwarnings
-filterwarnings('ignore')
-
-# SVR (Support Vector Regression/Destek Vektör Regresyonu)
-
-# Hatalardan kaçınma
-import warnings; filterwarnings('ignore')
+import warnings; warnings.filterwarnings('ignore') # Hatalardan kaçınma
 
 # Veri yükleme ve hazırlama
 df = pd.read_csv("dataframes/Hitters.csv") # Basebolla oyuncaları veri seti
@@ -50,3 +43,32 @@ print("\n\ntahmin edilen (test verisinden):\n",y_test)
 # hkokkd hata kareler ortalamasının karekökü değeri
 hkokkd = np.sqrt(mean_squared_error(y_test, y_pred))
 print("\n\nHata kareler ortalaması karekökü değeri: ",hkokkd)
+
+# SVR algoritmasının c (control parameter) değeri
+# control parametresi: modelin çalışmasını etkileyen, kullanıcı tarafından belirlenen parametrelerdir. ceza parametresi / karışıklık parametresi olarak ta adlandırılır.
+
+# RMSE = []
+# for k in range(11):
+#     k = k+1
+#     knn_model = KNeighborsRegressor(n_neighbors=k).fit(X_train, y_train)
+#     y_pred = knn_model.predict(X_test)
+#     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+#     RMSE.append(rmse)
+#     print("\nk=",k,"için RMSE değeri:",rmse)
+   
+ # GridSearchCV ile control parametresini otomatik belirleme
+svr_params = {"C":[.1,.5,1,3]}
+# knn = KNeighborsRegressor()
+# svr_cv_model = GridSearchCV(svr_model, svr_params, cv = 2).fit(X_train, y_train) # !!! cv parametresi için 3-5 gibi bir değerin üzerine çıktığında hesaplama süresi 10dkyı geçebilir..
+svr_cv_model = GridSearchCV(svr_model, svr_params, cv = 2, verbose=2, n_jobs=-1).fit(X_train, y_train) # !!! verbose=2, yapılan işlemleri göster, n_jobs=-1 işlemciyi max performansta kullan.
+print("svr_cv_model.best_params_ : ",svr_cv_model.best_params_)
+ 
+#  final model
+svr_tuned = SVR(kernel="linear",C=0.5).fit(X_train, y_train)
+y_pred = svr_tuned.predict(X_test)
+# final modelinin test hatası
+fmth = np.sqrt(mean_squared_error(y_test, y_pred))
+print("\n\nFinal modeli test hatası:",fmth) 
+
+
+

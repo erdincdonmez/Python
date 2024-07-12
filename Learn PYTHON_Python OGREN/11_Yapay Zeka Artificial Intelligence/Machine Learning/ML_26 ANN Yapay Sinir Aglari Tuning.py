@@ -1,18 +1,11 @@
-import numpy as np
-import pandas as pd
+# ANN Artificial Neural Netwok
+import numpy as np; import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import scale
 from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPRegressor
-
-from warnings import filterwarnings
-filterwarnings('ignore')
-
-# SVR (Support Vector Regression/Destek Vektör Regresyonu)
-
-# Hatalardan kaçınma
-import warnings; filterwarnings('ignore')
+import warnings; warnings.filterwarnings('ignore') # Hatalardan kaçınma
 
 # Veri yükleme ve hazırlama
 df = pd.read_csv("dataframes/Hitters.csv") # Basebolla oyuncaları veri seti

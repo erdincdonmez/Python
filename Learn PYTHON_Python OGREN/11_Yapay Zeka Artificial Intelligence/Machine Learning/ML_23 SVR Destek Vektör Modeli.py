@@ -1,17 +1,10 @@
-import numpy as np
-import pandas as pd
+# SVR (Support Vector Regression/Destek Vektör Regresyonu)
+import numpy as np; import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.svm import SVR
-
-from warnings import filterwarnings
-filterwarnings('ignore')
-
-# SVR (Support Vector Regression/Destek Vektör Regresyonu)
-
-# Hatalardan kaçınma
-import warnings; filterwarnings('ignore')
+import warnings; warnings.filterwarnings('ignore') # Hatalardan kaçınma
 
 # Veri yükleme ve hazırlama
 df = pd.read_csv("dataframes/Hitters.csv") # Basebolla oyuncaları veri seti
@@ -50,5 +43,3 @@ print("\n\ntahmin edilen (test verisinden):\n",y_test)
 # hkokkd hata kareler ortalamasının karekökü değeri
 hkokkd = np.sqrt(mean_squared_error(y_test, y_pred))
 print("\n\nHata kareler ortalaması karekökü değeri: ",hkokkd)
-
-
