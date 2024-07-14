@@ -11,3 +11,6 @@
 desktop.ini
 **/desktop.ini
 ./**/desktop.ini
+
+# Excel'in(office'nin) oluşturduğu geçici dosyaları takip etme diyoruz
+**/~$*
