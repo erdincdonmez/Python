@@ -53,6 +53,9 @@ y_pred = rf_tuned.predict(X_test)
 print("\n\nFinal modeli test hatası : ",accuracy_score(y_test, y_pred))
 
 #! DEĞİŞKEN ÖNEM DÜZEYLERİ
+
+# Makine öğrenmesinde orta seviye demek model tuning(parametre optimizasyonu) ve değişken önemlerini ayırt edebilme seviyesidir denilebilir.
+
 print("\n\nrf_tuned.get_params() : \n",rf_tuned.get_params())
 print("\n\nrf_tuned.feature_importances_ : \n",rf_tuned.feature_importances_)
 
