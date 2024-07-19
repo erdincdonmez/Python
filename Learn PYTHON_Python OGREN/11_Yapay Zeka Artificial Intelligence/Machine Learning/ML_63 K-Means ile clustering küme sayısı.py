@@ -55,7 +55,7 @@ plt.show()
 # Yellow brick ile görselleştirme
 # pip install yellowbrick
 from yellowbrick.cluster import KElbowVisualizer
-kmeans=KMeans()
+kmeans=KMeans(random_state=42)
 visu = KElbowVisualizer(kmeans, k=(2,20))
 visu.fit(df)
 visu.poof()
@@ -64,5 +64,5 @@ kmeans = KMeans(n_clusters=4).fit(df)
 print("\n\nkmeans:\n",kmeans)
 kumeler = kmeans.labels_
 pd.DataFrame({"Eyaletler":df.index, "Kümeler":kumeler})
-print("\n\ndf['Kume_No']\n")
-11:44 te kaldım.
+print("\n\ndf['Kume_No']\n",kumeler)
+#! Grafiği yerel bilgisayarda oluşturduğunuzda fit time çok gengesi olabilir.
