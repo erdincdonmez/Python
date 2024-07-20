@@ -12,7 +12,7 @@ print("\n\ndf.info()\n")
 df.info() # print içinde kullanınca bir şey yazmayabilir.
 print("\n\nBetimsel istatistikler:\n",df.describe().T)
 df.hist(figsize=(10,10)); 
-plt.show()
+# plt.show()
 
 #! CLUSTER OLUŞTURALIM
 kmeans = KMeans(n_clusters=4) 
@@ -39,18 +39,18 @@ plt.scatter(df.iloc[:,0],df.iloc[:,1],c= kumeler, s=50, cmap="viridis")
 # df.iloc[:, 0] : integer location,  [:, 0] ilk sütunundaki tüm değerler, [:, 1] ikinci sütunundaki tüm değerler
 # cmap (colormap), nokta renk haritası. "viridis" yeşil ve mor tonları.
 
-#! 
+#! EN OPTİMAL KÜME SAYISI
 print("\n\nDataframe:\n",df)
 ssd = [] # uzaklık farklarının karelerinin toplamı
 k = range(1,30)
 for x in k:
     kmeans = KMeans(n_clusters=x).fit(df)
     ssd.append(kmeans.inertia_)
-
-plt.plot(k, ssd, "bx-")
-plt.xlabel("Farklı k değerlerine karşılık artık toplamı")
-plt.title("Optimum küme sayısı için Elbow Yöntemi")
-plt.show()
+plt2 = plt
+plt2.plot(k, ssd, "bx-")
+plt2.xlabel("Farklı k değerlerine karşılık artık toplamı")
+plt2.title("Optimum küme sayısı için Elbow Yöntemi")
+plt2.show()
 
 # Yellow brick ile görselleştirme
 # pip install yellowbrick
@@ -65,4 +65,4 @@ print("\n\nkmeans:\n",kmeans)
 kumeler = kmeans.labels_
 pd.DataFrame({"Eyaletler":df.index, "Kümeler":kumeler})
 print("\n\ndf['Kume_No']\n")
-11:44 te kaldım.
+# 11:44 te kaldım.
