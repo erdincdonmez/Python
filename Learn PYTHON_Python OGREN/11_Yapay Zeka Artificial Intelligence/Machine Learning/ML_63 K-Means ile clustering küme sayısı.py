@@ -55,7 +55,7 @@ plt2.show()
 # Yellow brick ile görselleştirme
 # pip install yellowbrick
 from yellowbrick.cluster import KElbowVisualizer
-kmeans=KMeans()
+kmeans=KMeans(random_state=42)
 visu = KElbowVisualizer(kmeans, k=(2,20))
 visu.fit(df)
 visu.poof()
@@ -64,5 +64,10 @@ kmeans = KMeans(n_clusters=4).fit(df)
 print("\n\nkmeans:\n",kmeans)
 kumeler = kmeans.labels_
 pd.DataFrame({"Eyaletler":df.index, "Kümeler":kumeler})
+<<<<<<< HEAD:Learn PYTHON_Python OGREN/11_Yapay Zeka Artificial Intelligence/Machine Learning/ML_64 K-Means ile clustering küme sayısı.py
 print("\n\ndf['Kume_No']\n")
 # 11:44 te kaldım.
+=======
+print("\n\ndf['Kume_No']\n",kumeler)
+#! Grafiği yerel bilgisayarda oluşturduğunuzda fit time çok gengesi olabilir.
+>>>>>>> 875aa0ae9b9e61d935e85c9d590b04d73d6c0948:Learn PYTHON_Python OGREN/11_Yapay Zeka Artificial Intelligence/Machine Learning/ML_63 K-Means ile clustering küme sayısı.py
