@@ -11,7 +11,8 @@ print("\n\nEksik gözlemler:\n",df.isnull().sum())
 print("\n\ndf.info()\n")
 df.info() # print içinde kullanınca bir şey yazmayabilir.
 print("\n\nBetimsel istatistikler:\n",df.describe().T)
-# df.hist(figsize=(10,10)); # plt.show()
+# df.hist(figsize=(10,10)); 
+# # plt.show()
 
 #! CLUSTER OLUŞTURALIM
 kmeans = KMeans(n_clusters=4) 

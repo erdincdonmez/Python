@@ -10,7 +10,7 @@ for a in range (max):
     for b in range(a, max):
       if a == b : r1[a,b] = [0, 0, 0]
       if a == b//2 : r1[a,b] = [0, 0, 255]
-      # if b == max-20 : r1[a,b] = [0, 0, 255]
+      if b == max-20 : r1[a,b] = [0, 0, 255]
 
 for c in range(100):
    m1=random.randint(0,255); y1=random.randint(0,255); k1=random.randint(0,255);
