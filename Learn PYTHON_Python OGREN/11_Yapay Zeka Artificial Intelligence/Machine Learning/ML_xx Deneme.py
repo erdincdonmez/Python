@@ -1,33 +1,24 @@
+# Bu kod, basit bir kayıp fonksiyonu olan 𝑓(𝑥)=𝑥2f(x)=x 2'nin minimumunu bulmak için gradyan inişi algoritmasını kullanır. Öğrenme oranı (learning_rate) ve başlangıç noktası (initial_x) gibi parametreler, algoritmanın performansını etkileyebilir.
 import numpy as np
-import pandas as pd
-from sklearn.decomposition import PCA
-import matplotlib.pyplot as plt
 
-# Örnek veri seti oluşturma
-data = np.array([[2.5, 2.4],
-                 [0.5, 0.7],
-                 [2.2, 2.9],
-                 [1.9, 2.2],
-                 [3.1, 3.0],
-                 [2.3, 2.7],
-                 [2, 1.6],
-                 [1, 1.1],
-                 [1.5, 1.6],
-                 [1.1, 0.9]])
+# Örnek bir kayıp fonksiyonu: f(x) = x^2
+def loss_function(x):
+    return x ** 2
 
-# Veri setini DataFrame'e dönüştürme
-df = pd.DataFrame(data, columns=['x', 'y'])
+# Gradyanı hesapla: f'(x) = 2x
+def gradient(x):
+    return 2 * x
 
-# PCA uygulama
-pca = PCA(n_components=2)
-principal_components = pca.fit_transform(df)
+# Gradyan inişi parametreleri
+learning_rate = 0.1
+initial_x = 10  # Başlangıç noktası
+max_iterations = 100
 
-# PCA sonucunu DataFrame'e dönüştürme
-pca_df = pd.DataFrame(data=principal_components, columns=['PC1', 'PC2'])
+# Gradyan inişi algoritması
+x = initial_x
+for i in range(max_iterations):
+    grad = gradient(x)
+    x = x - learning_rate * grad  # Parametre güncellemesi
+    print(f"İterasyon {i+1}: x = {x}, Loss = {loss_function(x)}")
 
-# PCA sonucunu görselleştirme
-plt.scatter(pca_df['PC1'], pca_df['PC2'])
-plt.xlabel('PC1')
-plt.ylabel('PC2')
-plt.title('PCA Sonucu')
-plt.show()
+print(f"Minimuma ulaşılan x: {x}")
