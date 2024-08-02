@@ -75,7 +75,7 @@ print("\n\nx_train.shape2 : ",x_train.shape)
 print("\n\nx_test.shape2 : ",x_test.shape)
 
 
-# 3- Normalization / Aykırılıkları yoketme
+# 3- Normalization / Standardizasyon / Aykırılıkları yoketme
 x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255
 # resim_uzerinde_deger_göster(x_train[2])
