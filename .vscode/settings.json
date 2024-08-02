@@ -1,3 +1,10 @@
 {
-    "java.configuration.runtimes": []
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.fontSize": 22
+    }
 }
