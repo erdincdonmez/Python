@@ -20,6 +20,10 @@ print(f"Test setinin boyutu:\t {x_test.shape}x{y_test.shape}")
 num_labels = len (np.unique(y_train))
 print("Farklı etiket sayısı: ", num_labels)
 
+# One-hot encode labels. y_train ve y_test in her bir değeri (0 to 9) arası rakamlar iken, one-hot encoded ile her bir değer [0, 0, 1, 0, 0, 0, 0, 0, 0, 0] şekline dönüştürüldü.
+y_train = to_categorical(y_train, num_labels)
+y_test = to_categorical(y_test, num_labels)
+
 def tek_resim_goster(): # Tek resim göstermek için 
     plt.figure(figsize=(5,5))
     plt.imshow(x_train[2], cmap='gray') 
@@ -63,7 +67,6 @@ print("\n\ny_train[0:5] : ",y_train[0:5])
 print("\n\nto_categorical(y_train[0:5] : \n",to_categorical(y_train[0:5]))
 print("\n\nto_categorical(y_test[0:5] : \n",to_categorical(y_test[0:5]))
 
-
 # 2- Reshaping / veriyi yeniden şekillendirme
 print("\n\nx_train.shape[1] : ",x_train.shape[1])
 print("\n\nx_train.shape1 : ",x_train.shape)
@@ -80,3 +83,18 @@ x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255
 # resim_uzerinde_deger_göster(x_train[2])
 print("\n\nx_train[2] : \n",x_train[2])
+
+# MODEL KURMA
+model = tf.keras.Sequential([
+    Flatten(input_shape=(28,28,1)),
+    Dense(units=128, activation='relu', name='layer1'), # unit = 128 unit: nöron sayısı ,28x28 resimleri tanımlayabilecek feature/özellik/nöron sayısı, activation='relu' insan beynindeki gibi gereksiz bazı nöronları sönümlendiren bazılarını güçlendiren bir fonksiyon. gizli katmanlarda relu kullanılır.
+    Dense(units=num_labels, activation='softmax', name='output_layer') # activation='softmax' : çok sınıflı bir sınıflandırma problemi için softmax, iki sınıflı bir sınıflandırma problemi için sigmoid kullanılır.
+])
+
+model.compile(loss='categorical_crossentropy', # lose: hata/kayıp hesaplama yöntemi/hata değerlendirme metriği. Çok sınıflı olduğu için categorical_crossentropy
+              optimizer='adam', # loss fonksiyonunu optimize edecek algoritma. adam, Stochastic Gradient Descent,
+              metrics=[tf.keras.metrics.Precision(), tf.keras.metrics.Recall(), 'accuracy' ]
+              )
+model.summary()
+
+model.fit(x_train, y_train,epochs=5, batch_size=128, validation_data=(x_test, y_test)) # epoch : tur sayısı, batch_size: gradian hesaplarında ağırlık güncelleme küme sayısı. 128 = her iterasyonda 128 gözlem birimi dikkate alınıp işlemler yapıldıktan sonra sonraki iterasyona geç.
