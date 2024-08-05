@@ -10,3 +10,5 @@ print("="*20,"\nÇankaya Şubesi:\n",cankaya)
 
 # print("="*20, ">>\n",cankaya[1])
 print("="*20, ">>\n",cankaya[1][3])
+cankaya[1].append("Ali")
+
