@@ -11,6 +11,7 @@ class Ogrenci:
         print ("Metod ile: Adı Soyadı:",self.AdSoyad,", Numarası:",self.Numara)
 
 print("Sınıftaki adSoyad değeri:", Ogrenci.AdSoyad)
-ogrenci1 = Ogrenci("Ahmet BAL",10)
-ogrenci2 = Ogrenci("Veli GÜL",15)
+ogrenci1 = Ogrenci()
 ogrenci1.bilgi() 
+ogrenci2 = Ogrenci()
+ogrenci2.bilgi() 
