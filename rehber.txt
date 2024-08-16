@@ -1,4 +1,1 @@
-Adı:Erdinç DÖNMEZ	Numarası:5079856584
-Adı:OzanCan Türkoğlu	Numarası:5326325478
-Adı:Beste BAŞ		Numarası:5632547852
-Adı:Niyazi Erten	Numarası:5214785412
+{'adi': 'ozancan', 'num': '5236521478'},{'adi': 'Ozan CAN', 'num': '5621478521'},{'adi': 'Beste', 'num': '5415236541'},{'adi': 'Niyazi ARI', 'num': '& "C:/Program Files/Python310/python.exe" "d:/Erdinc DONMEZ/Python/Python DERSTE YAPILAN ornekler/Vektorel/vektorel_python94_20240717/2_DOSYA ISLEMLERI/h04_3 Dosya işlemleri/proje2/rehberapp eski.py"'},
