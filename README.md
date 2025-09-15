@@ -1,3 +1,5 @@
+<h1>My First Heading</h1>
+<h2>My First Heading</h2>
 <h1 style="color:red">Masaüstü rehber uygulaması</h1>
 <h2>Giriş ekranı...</h2>
 <img height="200" src="resimler/sifreEkrani.PNG"/>
